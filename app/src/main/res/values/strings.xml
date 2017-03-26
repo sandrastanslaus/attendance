@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AttendanceCheck</string>
+    <string name="course_prompt"> Choose a course</string>
+    <string-array name="course_arrays">
+
+        <item> Data Structures</item>
+        <item> Compiler </item>
+        <item> Android </item>
+        <item> Software Engineering </item>
+
+    </string-array>
+
+
+
+    <string name="action_settings">Settings</string>
+    <string name="Bregister">Register</string>
+    <string name="Blogin">Log In</string>
+    <string name= "BTeacherReg">Register</string>
+    <string name="Bteacher">Log In</string>
+
+
+
+</resources>
