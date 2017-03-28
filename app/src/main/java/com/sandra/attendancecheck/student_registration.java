@@ -1,88 +1,63 @@
 package com.sandra.attendancecheck;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.Menu;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 import android.widget.Button;
+
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class student_registration extends Activity {
 
-     EditText TFname, TFuname, TFpass1, TFpass2;
-     Button Bregister;
 
-    String namestr ,unamestr ,pass1str ,pass2str;
+   String namestr ,unamestr ,pass1str ,pass2str;
 
-  //  private ProgressDialog progressDialog;
+    //Progress Dialog
+    private ProgressDialog pDialog;
 
 
+    EditText name;
+    EditText uname;
+    EditText pass1;
+    EditText pass2;
+
+
+    Button Bregister;
+
+    // url to create new product
+    private static String url_register = "localhost/webapp/register.php ";
+
+    // JSON Node names
+    private static final String  TAG_SUCCESS = "success";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_registration);
 
-        TFname= (EditText) findViewById(R.id.TFname);
-        TFuname= (EditText) findViewById(R.id.TFuname);
-         TFpass1= (EditText) findViewById(R.id.TFpass1);
-         TFpass2= (EditText) findViewById(R.id.TFpass2);
+        //Edit Text
 
-        Bregister= (Button) findViewById(R.id.Bregister);
-     //   progressDialog = new ProgressDialog(this);
+        name = (EditText) findViewById(R.id.TFname);
+        uname = (EditText) findViewById(R.id.TFuname);
+        pass1 = (EditText) findViewById(R.id.TFpass1);
+        pass2 = (EditText) findViewById(R.id.TFpass2);
+
+        // create button
+        Bregister = (Button) findViewById(R.id.Bregister);
 
 
     }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-public void onRegisterClick(View v)
-{
-    if(v.getId()==R.id.Bregister) {
-        EditText name = (EditText) findViewById(R.id.TFname);
-        EditText uname = (EditText) findViewById(R.id.TFuname);
-        EditText pass1 = (EditText) findViewById(R.id.TFpass1);
-        EditText pass2 = (EditText) findViewById(R.id.TFpass2);
-
-        namestr = name.getText().toString();
-        unamestr = uname.getText().toString();
-        pass1str = pass1.getText().toString();
-        pass2str = pass2.getText().toString();
-
-        String method = "register";
-        StdBackgroundTask stdBackgroundTask = new StdBackgroundTask(this);
-        stdBackgroundTask.execute(method, namestr, unamestr, pass1str, pass2str);
-
-
-        finish(); // close registration layout
-    }
-
-       // progressDialog = new ProgressDialog(this);
-
-    if(!pass1str.equals(pass2str))
-    {
-        //popup msg
-        Toast pass= Toast.makeText(student_registration. this, "Passwords don't match" ,Toast.LENGTH_SHORT );
-        pass.show();
-    }
-
-
-
-
-
-
-
-
-
-
-}
-
-
 
 }

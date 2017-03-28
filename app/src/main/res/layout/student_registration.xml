@@ -3,6 +3,10 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:orientation="vertical">
 
+
+
+
+    <!-- name -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -10,10 +14,14 @@
         android:text="Name"
         android:id="@+id/textView4" />
 
+    <!-- name input -->
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TFname" />
+
+    <!-- username(ID) -->
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,11 +30,14 @@
         android:text="Username(ID)"
         android:id="@+id/textView5" />
 
+    <!-- Uname input -->
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TFuname" />
 
+    <!-- password -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,6 +45,7 @@
         android:text="Password"
         android:id="@+id/textView6" />
 
+    <!-- password input -->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,6 +53,7 @@
         android:ems="10"
         android:id="@+id/TFpass1" />
 
+    <!-- confirm password-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -48,6 +61,7 @@
         android:text="Confirm Password"
         android:id="@+id/textView7" />
 
+    <!--confirm password input-->
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,6 +69,7 @@
         android:ems="10"
         android:id="@+id/TFpass2" />
 
+    <!-- button register -->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

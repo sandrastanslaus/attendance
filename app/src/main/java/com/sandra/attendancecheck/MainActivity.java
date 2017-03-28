@@ -3,6 +3,7 @@ package com.sandra.attendancecheck;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -25,22 +26,25 @@ public class MainActivity extends Activity {
     }
 
 
-    public void onStudentButtonClick(View v)
-    {
-        Intent i= new Intent(MainActivity.this, student_login.class);
+    public void onStudentButtonClick(View v) {
+
+//        Intent i = new Intent(Settings.ACTION_ADD_ACCOUNT);
+       // i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+      //  i.putExtra(Settings.EXTRA_AUTHORITIES, new String[]{"com.app.attendancecheck"});
+//        startActivity(i);
+
+
+
+
+         Intent i = new Intent(MainActivity.this, student_login.class);
         startActivity(i);
 
     }
-    
-    public void onTeacherButtonClick(View v)
-    {
-        Intent i= new Intent(MainActivity.this, teacher_login.class);
-        startActivity(i);
+
+    public void onTeacherButtonClick(View v) {
+//        Intent i = new Intent(MainActivity.this, teacher_login.class);
+//        startActivity(i);
     }
-
-
-
-
 
 
     @Override
@@ -52,9 +56,11 @@ public class MainActivity extends Activity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(settingsIntent);
+        }
             return true;
         }
 
-        return super.onOptionsItemSelected(item);
+
     }
-}

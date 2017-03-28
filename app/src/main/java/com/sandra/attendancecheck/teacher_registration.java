@@ -35,7 +35,6 @@ public class teacher_registration extends Activity {
         //   progressDialog = new ProgressDialog(this);
 
 
-
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,30 +58,19 @@ public class teacher_registration extends Activity {
             tpass1str = tpass1.getText().toString();
             tpass2str = tpass2.getText().toString();
 
-            String method = "register";
-            TeachBackgroundTask teachBackgroundTask = new TeachBackgroundTask(this);
-            teachBackgroundTask.execute(method, teachernamestr, emailstr,coursestr, tpass1str, tpass2str);
-            finish();
         }
 
 
         //progressDialog= new ProgressDialog(this)
 
-            if(!tpass1str.equals(tpass2str))
-            {
-                //popup msg
-                Toast pass= Toast.makeText(teacher_registration. this, "Passwords don't match" ,Toast.LENGTH_SHORT );
-                pass.show();
-            }
-
-
-
-
-
+        if(!tpass1str.equals(tpass2str))
+        {
+            //popup msg
+            Toast pass= Toast.makeText(teacher_registration. this, "Passwords don't match" ,Toast.LENGTH_SHORT );
+            pass.show();
         }
 
-
-
+        }
 
     }
 
