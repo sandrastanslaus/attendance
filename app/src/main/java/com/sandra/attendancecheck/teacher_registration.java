@@ -15,7 +15,7 @@ public class teacher_registration extends Activity {
 
 
     EditText TFteachername, TFemail,TFcourse, TFtpass1, TFtpass2;
-    Button BteacherReg;
+    Button Bteacherregister;
 
     String teachernamestr ,emailstr ,coursestr, tpass1str ,tpass2str;
 
@@ -31,7 +31,7 @@ public class teacher_registration extends Activity {
         TFtpass1= (EditText) findViewById(R.id.TFtpass1);
         TFtpass2= (EditText) findViewById(R.id.TFtpass2);
         TFcourse= (EditText) findViewById(R.id.TFcourse);
-        BteacherReg= (Button) findViewById(R.id.BTeacherReg);
+        Bteacherregister= (Button) findViewById(R.id.Bteacherregister);
         //   progressDialog = new ProgressDialog(this);
 
 
@@ -43,9 +43,9 @@ public class teacher_registration extends Activity {
         return true;
     }
 
-    public void onBTeacherRegClick(View v)
+    public void onBteacherregisterClick(View v)
     {
-        if(v.getId()==R.id.BTeacherReg) {
+        if(v.getId()==R.id.Bteacherregister) {
             EditText teachername = (EditText) findViewById(R.id.TFteachername);
             EditText email = (EditText) findViewById(R.id.TFemail);
             EditText course = (EditText) findViewById(R.id.TFcourse);

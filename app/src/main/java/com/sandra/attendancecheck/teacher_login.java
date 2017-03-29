@@ -26,11 +26,11 @@ public class teacher_login extends Activity {
         return true;
     }
 
-    public void onBteacherClick(View v) {
+    public void onBteacherloginClick(View v) {
 
 
     }
-    public void onBteacherRegisterClick(View view){
+    public void onBteacherregistrationClick(View view){
 
 
 

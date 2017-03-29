@@ -1,26 +1,24 @@
 package com.sandra.attendancecheck;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import org.apache.http.NameValuePair;
+import org.json.JSONObject;
+
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class student_login extends Activity{
 
-    EditText uname,pass1;
-    String unamestr, pass1str;
+    EditText usernameEditText, passwordEditText;
 
 
 
@@ -30,8 +28,8 @@ public class student_login extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.student_login);
 
-//        uname= (EditText)findViewById(R.id.TFuname);
-        pass1= (EditText)findViewById(R.id.TFpass1);
+        usernameEditText = (EditText)findViewById(R.id.TFuname);
+        passwordEditText = (EditText)findViewById(R.id.TFpass1);
 
     }
 
@@ -47,16 +45,33 @@ public class student_login extends Activity{
 
 
 
-    public void onBloginClick(View v) {
+    public void onBstudentloginClick(View v) {
 
-        RequestService requestService = new RequestService();
-        requestService.execute();
+        String username = usernameEditText.getText().toString();
+        String password = passwordEditText.getText().toString();
+
+
+        try {
+            String data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(username, "UTF-8");
+
+            data += "&" + URLEncoder.encode("password", "UTF-8") + "=" + URLEncoder.encode(password, "UTF-8");
+
+            PostRequestService postRequestService = new PostRequestService();
+            postRequestService.execute("http://192.168.3.5/webapp/login.php", data);
+
+
+        } catch (UnsupportedEncodingException e)
+        {
+            System.out.println(e.toString());
+        }
+
+
 
     }
 
 
 
-    public void onBregisterClick(View view){
+    public void onBstudentregistrationClick(View view){
         Intent i = new Intent(student_login.this, student_registration.class);
 
         startActivity(i);

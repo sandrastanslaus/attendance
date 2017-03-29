@@ -74,7 +74,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register"
-        android:id="@+id/Bregister"
-        android:onClick="onRegisterClick" />
+        android:id="@+id/Bstudentregister"
+        android:onClick="onBstudentregisterClick" />
 
 </LinearLayout>

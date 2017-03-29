@@ -34,7 +34,7 @@ public class student_registration extends Activity {
     EditText pass2;
 
 
-    Button Bregister;
+    Button Bstudentregister;
 
     // url to create new product
     private static String url_register = "localhost/webapp/register.php ";
@@ -55,7 +55,7 @@ public class student_registration extends Activity {
         pass2 = (EditText) findViewById(R.id.TFpass2);
 
         // create button
-        Bregister = (Button) findViewById(R.id.Bregister);
+        Bstudentregister = (Button) findViewById(R.id.Bstudentregister);
 
 
     }

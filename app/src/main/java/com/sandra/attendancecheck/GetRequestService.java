@@ -11,20 +11,23 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class RequestService extends AsyncTask<Void, Void, Void> {
+public class GetRequestService extends AsyncTask<String, Void, Void> {
 
-    private final String LOG_TAG = RequestService.class.getSimpleName();
+    private final String LOG_TAG = GetRequestService.class.getSimpleName();
 
     @Override
-    protected Void doInBackground(Void... params)
+    protected Void doInBackground(String... params)
     {
+
+        String urlString = params[0];
+
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
 
         String loginJsonStr = null;
 
         try {
-            URL url = new URL("http://192.168.3.5/webapp/login.php");
+            URL url = new URL(urlString);
 
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");

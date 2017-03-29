@@ -46,19 +46,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Blogin"
-        android:id="@+id/Blogin"
+        android:id="@+id/Bstudentlogin"
         android:layout_marginTop="60dp"
         android:layout_below="@+id/TFpass1"
         android:layout_centerHorizontal="true"
-        android:onClick="onBloginClick" />
+        android:onClick="onBstudentloginClick" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Bregister"
-        android:id="@+id/Bregister"
+        android:id="@+id/Bstudentregistration"
         android:layout_below="@+id/Blogin"
         android:layout_centerHorizontal="true"
-        android:onClick="onBregisterClick" />
+        android:onClick="onBstudentregistrationClick" />
 
 </RelativeLayout>

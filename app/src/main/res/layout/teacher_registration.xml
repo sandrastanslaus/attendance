@@ -88,10 +88,10 @@
 
 
     <Button
-        android:id="@+id/BTeacherReg"
+        android:id="@+id/Bteacherregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:onClick="onBTeacherRegClick"
+        android:onClick="onBteacherregisterClick"
         android:text="Register" />
 </LinearLayout>

@@ -40,22 +40,22 @@
         android:id="@+id/Bteacherlogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/BteacherRegister"
+        android:layout_above="@+id/Bteacherregistration"
         android:layout_alignEnd="@+id/TFteacherpass"
         android:layout_alignRight="@+id/TFteacherpass"
         android:layout_marginBottom="36dp"
-        android:onClick="onBteacherClick"
+        android:onClick="onBteacherloginClick"
         android:text="Log In" />
 
     <Button
-        android:id="@+id/BteacherRegister"
+        android:id="@+id/Bteacherregistration"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/Bteacherlogin"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/Bteacherlogin"
         android:layout_marginBottom="17dp"
-        android:onClick="onBteacherRegisterClick"
+        android:onClick="onBteacherregistrationClick"
         android:text="Register" />
 
     <EditText
